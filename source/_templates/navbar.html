@@ -1,0 +1,9 @@
+{% extends "!navbar.html" %}
+
+{# Not showing globaltoc on top navbar #}
+{% block navbartoc %}
+    {% if theme_navbar_pagenav %}
+        {% include "navbartoc.html" %}
+    {% endif %}
+{% endblock %}
+
