@@ -127,14 +127,14 @@ html_theme = 'bootstrap'
 html_theme_options = {
         'navbar_pagenav_name': "TOC",
         'globaltoc_depth'    : 2,
-        'bootswatch_theme': "readable",
+        'bootswatch_theme': "journal",
         'navbar_sidebarrel': False,
         'navbar_pagenav': False,
         'globaltoc_includehidden': "true",
         'navbar_class': "navbar",
         'navbar_fixed_top': "true",
         'navbar_links': [
-            ("knowlege", "kb"),
+            ("knowledge", "kb"),
             ("Project", "pj"),
             ("Me", "about"),
         ],
