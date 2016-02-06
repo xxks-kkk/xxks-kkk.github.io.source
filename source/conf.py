@@ -128,6 +128,9 @@ html_theme_options = {
         'navbar_pagenav_name': "TOC",
         'globaltoc_depth'    : 2,
         'bootswatch_theme': "readable",
+        'globaltoc_includehidden': "true",
+        'navbar_class': "navbar",
+        'navbar_fixed_top': "true",
         }
 
 # Add any paths that contain custom themes here, relative to this directory.
@@ -168,7 +171,7 @@ html_static_path = ['_static']
 #html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
-#html_sidebars = {}
+html_sidebars = {'sidebar': ['localtoc.html', 'searchbox.html']}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
