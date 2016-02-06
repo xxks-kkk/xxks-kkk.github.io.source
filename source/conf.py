@@ -38,6 +38,10 @@ extensions = [
     'sphinx.ext.ifconfig',
 ]
 
+# disqus
+#disqus_shortname = 'zeyuan'
+#extensions = ['sphinxcontrib.disqus']
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -120,17 +124,21 @@ html_theme = 'bootstrap'
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {}
+html_theme_options = {
+        'navbar_pagenav_name': "TOC",
+        'globaltoc_depth'    : 2,
+        'bootswatch_theme': "readable",
+        }
 
 # Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-#html_title = None
+html_title = 'HZY'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-#html_short_title = None
+html_short_title = 'HZY'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -167,7 +175,7 @@ html_static_path = ['_static']
 #html_additional_pages = {}
 
 # If false, no module index is generated.
-#html_domain_indices = True
+html_domain_indices = False
 
 # If false, no index is generated.
 #html_use_index = True
