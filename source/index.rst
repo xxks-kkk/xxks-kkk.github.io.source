@@ -7,8 +7,8 @@
 Zeyuan's Knowledge Base
 #######################
 
-
 .. toctree::
-   :maxdepth: 2
-
-    msg.rst
+    
+    blog.rst
+    about.rst
+    kb.rst
