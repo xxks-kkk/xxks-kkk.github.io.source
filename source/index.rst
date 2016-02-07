@@ -3,22 +3,20 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-#######################
-Zeyuan's Knowledge Base
-#######################
+.. _`Big SQL`: http://www-01.ibm.com/software/data/infosphere/hadoop/big-sql.html
+.. _`federation`: http://www-03.ibm.com/software/products/en/ibminfofedeserv
 
-=================
-Random Articles
-=================
+################
+Zeyuan's World
+################
 
-.. toctree::
-    
-    blog.rst
+.. meta::
+   :description: This is the homepage of Zeyuan Hu, a software developer at IBM
+   :keywords: Zeyuan Hu, Zeyuan, Zeyuan uw, Zeyuan UW Madison, UW Madison, University of Wisconsin Madison, IBM, federation, Big SQL, federation server, DB2
+   :author: Zeyuan Hu
 
-=================
-Knowledge Base
-=================
+Welcome! I am a software developer \@ IBM working on Big Data `federation`_ query server and `Big SQL`_, a Massively Parallel Processing query engine on Hadoop.
 
-.. toctree::
+This site mainly contains my personal :ref:`kb.rst`, :ref:`pj.rst` I have done, and rarely appeard poorly-written articles.
 
-    kb.rst
+.. include:: contact.rst
