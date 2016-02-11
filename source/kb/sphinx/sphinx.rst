@@ -1,4 +1,5 @@
-.. _sphinx.rst:
+.
+_sphinx.rst:
 
 ######################
 Sphinx-Doc
@@ -17,9 +18,8 @@ Topics
 Resources
 ***********
 
-- `Sphinx Quick Reference Guide <http://www.ittc.ku.edu/kusp/new/howto/sphinx/reference.html>`_ 
+.. toctree::
+    :maxdepth: 2
 
-.. note::
-
-    There are a tons of Sphinx quick tutorial. I use this particularly to follow its `section heading <http://www.ittc.ku.edu/kusp/new/howto/sphinx/reference.html#section-headings>`_ rule.
+    resource.rst
 
