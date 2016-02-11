@@ -15,7 +15,8 @@ DB2
 Everything involves `DB2`_ or database in general can be easily found here.
 
 .. toctree::
-   
+    :maxdepth: 2   
+
     exam610_p4.rst
 
 ***************
@@ -25,7 +26,7 @@ Utility Topics
 List of topics on Utility tools that I experience to improve my productivity.
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 3
     
     /kb/sphinx/sphinx.rst
 

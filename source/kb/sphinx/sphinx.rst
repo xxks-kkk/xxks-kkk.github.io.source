@@ -4,4 +4,22 @@
 Sphinx-Doc
 ######################
 
+***********
+Topics
+***********
+
+.. toctree::
+    :maxdepth: 2
+
+    disqus.rst
+
+***********
+Resources
+***********
+
+- `Sphinx Quick Reference Guide <http://www.ittc.ku.edu/kusp/new/howto/sphinx/reference.html>`_ 
+
+.. note::
+
+    There are a tons of Sphinx quick tutorial. I use this particularly to follow its `section heading <http://www.ittc.ku.edu/kusp/new/howto/sphinx/reference.html#section-headings>`_ rule.
 
