@@ -13,7 +13,7 @@ Git trouble shooting guide.
 
 .. topic:: Problem
 
-     | [zeyuan@hadoop Documents]$ ssh -T git@github.com
+     | $ ssh -T git@github.com
      | Agent admitted failure to sign using the key.
      | Permission denied (publickey).
 
