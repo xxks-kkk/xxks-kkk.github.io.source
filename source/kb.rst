@@ -9,21 +9,33 @@ Knowledge Base
 
 
 ***********
-DB2
+Database
 ***********
 
-Everything involves `DB2`_ or database in general can be easily found here.
+`DB2`_ combines with database in general.
+
+========
+Topics
+========
 
 .. toctree::
     :maxdepth: 2   
 
-    exam610_p4.rst
+    /kb/db2/db2-topics/p1.rst
+    /kb/db2/db2-topics/p2.rst
+    /kb/db2/db2-topics/p3.rst
+    /kb/db2/db2-topics/p4.rst
+    /kb/db2/db2-topics/db2_howto.rst
 
 ***************
-Utility Topics
+All Other
 ***************
 
-List of topics on Utility tools that I experience to improve my productivity.
+Misc topics and tips.
+
+==========
+Tools
+==========
 
 .. toctree::
     :maxdepth: 3
@@ -31,20 +43,14 @@ List of topics on Utility tools that I experience to improve my productivity.
     /kb/sphinx/sphinx.rst
     /kb/git.rst
 
-**************
-Tips
-**************
-
-Similar to the previous section but highly biased towards Linux/Unix, Programming in general.
+==========
+Linux
+==========
 
 .. toctree::
     :maxdepth: 2
 
+    /kb/linux/awk.rst
 
-**************
-CS 
-**************
-
-More theoretical and practical learning towards various Computer Science fields.
 
 
