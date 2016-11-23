@@ -40,7 +40,7 @@ extensions = [
 
 # disqus
 disqus_shortname = 'zeyuan'
-extensions.append('sphinxcontrib.newsfeed')
+#extensions.append('sphinxcontrib.newsfeed')
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

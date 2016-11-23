@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Add disqus into doc &mdash; HZY</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.3.6/journal/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.1.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="top" title="HZY" href="../../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+  
+  <a href="https://github.com/xxks-kkk/xxks-kkk.github.io"
+     class="visible-desktop hidden-xs"><img
+     id="gh-banner"
+     style="position: absolute; top: 50px; right: 0; border: 0;"
+     src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"
+     alt="Fork me on GitHub"></a>
+  <script>
+    // Adjust banner height.
+    $(function () {
+      var navHeight = $(".navbar .container").css("height");
+      $("#gh-banner").css("top", navHeight);
+    });
+ </script>
+
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          Zeyuan&#39;s World</a>
+        <span class="navbar-text navbar-version pull-left"><b>3.1.5</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../../kb.html">Knowledge</a></li>
+                <li><a href="../../pj.html">Project</a></li>
+                <li><a href="../../about.html">Me</a></li>
+            
+            
+    
+
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Add disqus into doc</a><ul>
+<li><a class="reference internal" href="#do-it-on-your-own">Do It On Your Own</a></li>
+<li><a class="reference internal" href="#extension-to-shine">Extension to Shine</a></li>
+<li><a class="reference internal" href="#leave-a-comment">Leave a Comment</a></li>
+</ul>
+</li>
+</ul>
+
+<form action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="add-disqus-into-doc">
+<span id="disqus-rst"></span><h1>Add disqus into doc<a class="headerlink" href="#add-disqus-into-doc" title="Permalink to this headline">¶</a></h1>
+<p>One of the driven factors that I want to remake my own personal website is that one day I saw this cool <a class="reference external" href="http://xiaming.me">site</a>. I really want to have some interaction
+with unknown readers (I mean you :)) while also having some chance to keep improving based upon feedbacks (again, I mean yours :)). However,
+I am reluctant to adopt the easy-out way: learn <a class="reference external" href="http://blog.getpelican.com">pelican</a> &#8211;&gt; use <a class="reference external" href="https://github.com/jsliang/pelican-fresh/">fresh</a> them &#8211;&gt; start writing. This mainly because I love Sphinx documentation style.
+So clean, so elegant (BTW, even <a class="reference external" href="http://blog.getpelican.com">pelican</a> use Sphinx to do their <a class="reference external" href="http://docs.getpelican.com/en/3.63/">doc</a>, haha). After some experimenting, I finally make it work and I&#8217;ll document it for
+future reference:</p>
+<div class="section" id="do-it-on-your-own">
+<h2>Do It On Your Own<a class="headerlink" href="#do-it-on-your-own" title="Permalink to this headline">¶</a></h2>
+<p>1. Once you register a website in <a class="reference external" href="https://disqus.com">disqus</a>, you will direct to <em>Installation</em> section. You choose <em>Universal Code</em> and will get a chunk of code that
+asks you to &#8220;Place the following code where you&#8217;d like Disqus to load&#8221;:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">div</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;disqus_thread&quot;</span><span class="o">&gt;&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+         <span class="o">/**</span>
+          <span class="o">*</span> <span class="n">RECOMMENDED</span> <span class="n">CONFIGURATION</span> <span class="n">VARIABLES</span><span class="p">:</span> <span class="n">EDIT</span> <span class="n">AND</span> <span class="n">UNCOMMENT</span> <span class="n">THE</span> <span class="n">SECTION</span> <span class="n">BELOW</span> <span class="n">TO</span> <span class="n">INSERT</span> <span class="n">DYNAMIC</span> <span class="n">VALUES</span> <span class="n">FROM</span> <span class="n">YOUR</span> <span class="n">PLATFORM</span> <span class="n">OR</span> <span class="n">CMS</span><span class="o">.</span>
+          <span class="o">*</span> <span class="n">LEARN</span> <span class="n">WHY</span> <span class="n">DEFINING</span> <span class="n">THESE</span> <span class="n">VARIABLES</span> <span class="n">IS</span> <span class="n">IMPORTANT</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">disqus</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">admin</span><span class="o">/</span><span class="n">universalcode</span><span class="o">/</span><span class="c1">#configuration-variables</span>
+          <span class="o">*/</span>
+          <span class="o">/*</span>
+           <span class="n">var</span> <span class="n">disqus_config</span> <span class="o">=</span> <span class="n">function</span> <span class="p">()</span> <span class="p">{</span>
+           <span class="n">this</span><span class="o">.</span><span class="n">page</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">PAGE_URL</span><span class="p">;</span> <span class="o">//</span> <span class="n">Replace</span> <span class="n">PAGE_URL</span> <span class="k">with</span> <span class="n">your</span> <span class="n">page</span><span class="s1">&#39;s canonical URL variable</span>
+           <span class="n">this</span><span class="o">.</span><span class="n">page</span><span class="o">.</span><span class="n">identifier</span> <span class="o">=</span> <span class="n">PAGE_IDENTIFIER</span><span class="p">;</span> <span class="o">//</span> <span class="n">Replace</span> <span class="n">PAGE_IDENTIFIER</span> <span class="k">with</span> <span class="n">your</span> <span class="n">page</span><span class="s1">&#39;s unique identifier variable</span>
+           <span class="p">};</span>
+           <span class="o">*/</span>
+           <span class="n">var</span> <span class="n">disqus_shortname</span> <span class="o">=</span> <span class="s1">&#39;zeyuan&#39;</span><span class="p">;</span> <span class="o">//</span> <span class="n">required</span><span class="p">:</span> <span class="n">replace</span> <span class="n">example</span> <span class="k">with</span> <span class="n">your</span> <span class="n">forum</span> <span class="n">shortname</span>
+           <span class="p">(</span><span class="n">function</span><span class="p">()</span> <span class="p">{</span> <span class="o">//</span> <span class="n">DON</span><span class="s1">&#39;T EDIT BELOW THIS LINE</span>
+           <span class="n">var</span> <span class="n">d</span> <span class="o">=</span> <span class="n">document</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
+           <span class="n">s</span><span class="o">.</span><span class="n">src</span> <span class="o">=</span> <span class="s1">&#39;//zeyuan.disqus.com/embed.js&#39;</span><span class="p">;</span>
+           <span class="n">s</span><span class="o">.</span><span class="n">setAttribute</span><span class="p">(</span><span class="s1">&#39;data-timestamp&#39;</span><span class="p">,</span> <span class="o">+</span><span class="n">new</span> <span class="n">Date</span><span class="p">());</span>
+           <span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">head</span> <span class="o">||</span> <span class="n">d</span><span class="o">.</span><span class="n">body</span><span class="p">)</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+           <span class="p">})();</span>
+     <span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">noscript</span><span class="o">&gt;</span><span class="n">Please</span> <span class="n">enable</span> <span class="n">JavaScript</span> <span class="n">to</span> <span class="n">view</span> <span class="n">the</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://disqus.com/?ref_noscript&quot;</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;nofollow&quot;</span><span class="o">&gt;</span><span class="n">comments</span> <span class="n">powered</span> <span class="n">by</span> <span class="n">Disqus</span><span class="o">.&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">noscript</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You need to add <code class="docutils literal"><span class="pre">var</span> <span class="pre">disqus_shortname</span> <span class="pre">=</span> <span class="pre">'zeyuan';</span></code> to the code chunk provided by disqus, and make it look like above.</p>
+</div>
+<ol class="arabic" start="2">
+<li><p class="first">Then, inside Sphinx-doc, you can add the code chunk above to your preferred rst files with a
+<a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html#raw-data-pass-through">raw directive</a>. For example, inside <code class="docutils literal"><span class="pre">foo.rst</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">====================================</span>
+<span class="n">Nice</span> <span class="n">Example</span> <span class="n">to</span> <span class="n">show</span> <span class="n">disqus</span> <span class="n">comment</span>
+<span class="o">====================================</span>
+
+<span class="n">I</span> <span class="n">would</span> <span class="n">like</span> <span class="n">to</span> <span class="n">show</span> <span class="n">how</span> <span class="n">to</span> <span class="n">add</span> <span class="n">disqus</span> <span class="n">comment</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">page</span><span class="o">.</span>
+
+<span class="o">..</span> <span class="n">raw</span><span class="p">::</span> <span class="n">html</span>
+
+    <span class="o">&lt;</span><span class="n">the</span> <span class="n">code</span> <span class="n">chunk</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Essentially, adding disqus to Sphinx-doc is done by step 2. However, I would like to add one more layer of encapuslation to make everything looks
+nicer. I create a rst file called <code class="docutils literal"><span class="pre">comment.rst</span></code> and it looks like following:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">_comment</span><span class="o">.</span><span class="n">rst</span><span class="p">:</span>
+
+<span class="o">..</span> <span class="n">raw</span><span class="p">::</span> <span class="n">html</span>
+
+	 <span class="o">&lt;</span><span class="n">div</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;disqus_thread&quot;</span><span class="o">&gt;&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+	 <span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+	 <span class="o">/**</span>
+	 <span class="o">*</span> <span class="n">RECOMMENDED</span> <span class="n">CONFIGURATION</span> <span class="n">VARIABLES</span><span class="p">:</span> <span class="n">EDIT</span> <span class="n">AND</span> <span class="n">UNCOMMENT</span> <span class="n">THE</span> <span class="n">SECTION</span> <span class="n">BELOW</span> <span class="n">TO</span> <span class="n">INSERT</span> <span class="n">DYNAMIC</span> <span class="n">VALUES</span> <span class="n">FROM</span> <span class="n">YOUR</span> <span class="n">PLATFORM</span> <span class="n">OR</span> <span class="n">CMS</span><span class="o">.</span>
+	   <span class="o">*</span> <span class="n">LEARN</span> <span class="n">WHY</span> <span class="n">DEFINING</span> <span class="n">THESE</span> <span class="n">VARIABLES</span> <span class="n">IS</span> <span class="n">IMPORTANT</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">disqus</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">admin</span><span class="o">/</span><span class="n">universalcode</span><span class="o">/</span><span class="c1">#configuration-variables</span>
+	     <span class="o">*/</span>
+	     <span class="o">/*</span>
+	     <span class="n">var</span> <span class="n">disqus_config</span> <span class="o">=</span> <span class="n">function</span> <span class="p">()</span> <span class="p">{</span>
+	     <span class="n">this</span><span class="o">.</span><span class="n">page</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">PAGE_URL</span><span class="p">;</span> <span class="o">//</span> <span class="n">Replace</span> <span class="n">PAGE_URL</span> <span class="k">with</span> <span class="n">your</span> <span class="n">page</span><span class="s1">&#39;s canonical URL variable</span>
+	     <span class="n">this</span><span class="o">.</span><span class="n">page</span><span class="o">.</span><span class="n">identifier</span> <span class="o">=</span> <span class="n">PAGE_IDENTIFIER</span><span class="p">;</span> <span class="o">//</span> <span class="n">Replace</span> <span class="n">PAGE_IDENTIFIER</span> <span class="k">with</span> <span class="n">your</span> <span class="n">page</span><span class="s1">&#39;s unique identifier variable</span>
+	     <span class="p">};</span>
+	     <span class="o">*/</span>
+	             <span class="n">var</span> <span class="n">disqus_shortname</span> <span class="o">=</span> <span class="s1">&#39;zeyuan&#39;</span><span class="p">;</span> <span class="o">//</span> <span class="n">required</span><span class="p">:</span> <span class="n">replace</span> <span class="n">example</span> <span class="k">with</span> <span class="n">your</span> <span class="n">forum</span> <span class="n">shortname</span> 
+	     <span class="p">(</span><span class="n">function</span><span class="p">()</span> <span class="p">{</span> <span class="o">//</span> <span class="n">DON</span><span class="s1">&#39;T EDIT BELOW THIS LINE</span>
+	     <span class="n">var</span> <span class="n">d</span> <span class="o">=</span> <span class="n">document</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
+
+	     <span class="n">s</span><span class="o">.</span><span class="n">src</span> <span class="o">=</span> <span class="s1">&#39;//zeyuan.disqus.com/embed.js&#39;</span><span class="p">;</span>
+
+	     <span class="n">s</span><span class="o">.</span><span class="n">setAttribute</span><span class="p">(</span><span class="s1">&#39;data-timestamp&#39;</span><span class="p">,</span> <span class="o">+</span><span class="n">new</span> <span class="n">Date</span><span class="p">());</span>
+	     <span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">head</span> <span class="o">||</span> <span class="n">d</span><span class="o">.</span><span class="n">body</span><span class="p">)</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+	     <span class="p">})();</span>
+	     <span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+	     <span class="o">&lt;</span><span class="n">noscript</span><span class="o">&gt;</span><span class="n">Please</span> <span class="n">enable</span> <span class="n">JavaScript</span> <span class="n">to</span> <span class="n">view</span> <span class="n">the</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://disqus.com/?ref_noscript&quot;</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;nofollow&quot;</span><span class="o">&gt;</span><span class="n">comments</span> <span class="n">powered</span> <span class="n">by</span> <span class="n">Disqus</span><span class="o">.&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">noscript</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Then, whenever I want to add disqus comment, I can simply add:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">include</span><span class="p">::</span> <span class="n">comment</span><span class="o">.</span><span class="n">rst</span>
+</pre></div>
+</div>
+<p>to wherever I want disqus comment section appear.</p>
+</li>
+<li><p class="first">If you want to further adjust the width of disqus appears in Sphinx-Doc, I think
+<a class="reference external" href="https://github.com/whiteinge/eseth/blob/master/static/base-eseth.css">this repo</a> should be a good reference.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The repo is also a awesome study material to create your own sphinx template and make it to a blog site.</p>
+</div>
+</div>
+<div class="section" id="extension-to-shine">
+<h2>Extension to Shine<a class="headerlink" href="#extension-to-shine" title="Permalink to this headline">¶</a></h2>
+<p>Of course, we can definitely look for extensions to help us to solve the problem. The plugin I use is <a class="reference external" href="https://pypi.python.org/pypi/sphinxcontrib-newsfeed">sphinxcontrib-newsfeed</a>, it comes with a support
+of Disqus. It is nice and does work for me.</p>
+</div>
+<div class="section" id="leave-a-comment">
+<h2>Leave a Comment<a class="headerlink" href="#leave-a-comment" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2016, Zeyuan (Jerry) Hu.<br/>
+      Last updated on Nov 23, 2016.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
